@@ -13,11 +13,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
     <!-- Style -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <title>Multiple user login</title>
+    <title> User login</title>
   </head>
   <body>
   <div class="content">
@@ -28,7 +29,7 @@
             <div class="col-md-12">
               <div class="form-block">
                   <div class="mb-4">
-                      <h1>User Registration page</h1>
+                      <h1>User Registration</h1>
                 </div>
                   <span class="mb-0 text-muted">
                 {% if msg %}
@@ -63,13 +64,13 @@
                   </div>
                   <div class="d-flex mb-5 align-items-center">
                     <label class="control control--checkbox mb-0"><span class="caption">Student</span>
-                        {{ form.is_customer }}
+                        {{ form.is_student }}
                       <div class="control__indicator"></div>
                     </label>
                   </div>
                   <div class="d-flex mb-5 align-items-center">
                     <label class="control control--checkbox mb-0"><span class="caption">Teacher</span>
-                        {{ form.is_employee }}
+                        {{ form.is_teacher }}
                       <div class="control__indicator"></div>
                     </label>
                   </div>
