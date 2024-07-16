@@ -35,10 +35,10 @@ def login_view(request):
             if user is not None and user.is_admin:
                 login(request, user)
                 return redirect('adminpage')
-            elif user is not None and user.is_customer:
+            elif user is not None and user.is_student:
                 login(request, user)
                 return redirect('student')
-            elif user is not None and user.is_employee:
+            elif user is not None and user.is_teacher:
                 login(request, user)
                 return redirect('teacher')
             else:
