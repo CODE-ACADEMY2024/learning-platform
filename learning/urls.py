@@ -17,6 +17,8 @@ Including another URLconf
 # your_app/urls.py
 from django.urls import path
 from . import views
+from django.contrib import admin
+from django.urls import include,  path
 
 urlpatterns = [
 
@@ -26,5 +28,6 @@ urlpatterns = [
 
     path('form/', views.my_form_view, name='my_form'),
     path('success/', views.success_view, name='success'),  # Add a success view as well
+    path('' , include('account.urls')),
 ]
 
